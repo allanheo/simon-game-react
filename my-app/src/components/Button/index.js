@@ -1,21 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Wrapper }  from './Button.styles'
 
-const Button = styled.button`
-  position: absolute;
-  background: white;
-  color: black;
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 100px;
-  height: 50px;
-  cursor: pointer;
-`;
 
-const LightSwitch = ({ callback, position, switchOn }) => (
-    <Button onClick={callback} position={position}>
-        <div>hello</div>
-    </Button>
+const Button = ({ callback, position, name }) => (
+    <Wrapper onClick={callback} position={position}>
+        <div>{name}</div>
+    </Wrapper>
+    
 );
 
 export default Button;
