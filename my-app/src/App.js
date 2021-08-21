@@ -5,19 +5,17 @@ import styled from 'styled-components';
 
 function App() {
   
-  const Room = styled.div`
-    position: relative;
-    width: 500px;
-    height: 500px;
-    border: 10px solid black;
-    margin: 0 auto;
-  `;
+  let round = 0; 
+  
+  const buttonClick = () => console.log('hello');
 
   return (
-  <Room>
-    <Button type='button' name='button1' position='left'/> 
-    <Button type='button' name='button2' position='right'/>
-  </Room>  
+    <div>
+      <Button type='button' position='topleft' color='red' callback={buttonClick} /> 
+      <Button type='button' position='topright' color='blue' callback={buttonClick} />
+      <Button type='button' position='bottomleft' color='green' callback={buttonClick} />
+      <Button type='button' position='bottomright' color='yellow' callback={buttonClick} />
+    </div>
   );
 }
 
